@@ -1,0 +1,7 @@
+aws configure
+nano start-port-forwarding-session.sh
+chmod +x ./start-port-forwarding-session.sh
+sudo nano /etc/systemd/system/<Target>-connection.service
+sudo systemctl daemon-reload
+sudo systemctl enable ssm-port-forwarding.service
+sudo systemctl start ssm-port-forwarding.service
