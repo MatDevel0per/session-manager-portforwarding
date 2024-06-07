@@ -1,0 +1,12 @@
+[Unit]
+Description=AWS SSM Port Forwarding Service for <Service here>
+After=network.target
+
+[Service]
+ExecStart=<path to start-port-forward-session.sh> <Instance ID> <Port the target service is running on> <Local port available>
+Restart=always
+User=<Your username for the machine your on>
+
+
+[Install]
+WantedBy=multi-user.target
